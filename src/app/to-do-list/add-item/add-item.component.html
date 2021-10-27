@@ -1,0 +1,11 @@
+<div class="input-group mb-3">
+  <input
+    type="text"
+    class="form-control"
+    placeholder="What's new?"
+    [(ngModel)]="newItem"
+  >
+  <div class="input-group-append">
+    <button class="btn btn-outline-secondary" type="button" (click)="addNewItem(newItem.trim())">ADD</button>
+  </div>
+</div>

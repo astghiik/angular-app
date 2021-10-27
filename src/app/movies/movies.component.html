@@ -1,0 +1,21 @@
+<div class="px-3 mx-auto mt-5">
+  <div class="input-group mb-3 w-50 mx-auto">
+    <input [(ngModel)]="searchName" type="text" class="form-control" placeholder="Name">
+    <div class="input-group-append">
+      <button (click)="search()" class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div *ngFor="let movie of searchResults.results" class="col my-4">
+      <div class="card h-100 mx-auto position-relative" style="width: 18rem;">
+        <img src="{{movie.image}}" class="card-img-top" alt="poster">
+        <div class="card-body">
+          <h5 class="card-title fs-3">{{movie.title}}</h5>
+          <p class="card-text">{{movie.description}}</p>
+          <a routerLink="{{movie.id}}" class="btn btn-primary btm-btn">See more</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

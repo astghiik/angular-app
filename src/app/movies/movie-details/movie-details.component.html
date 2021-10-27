@@ -1,0 +1,14 @@
+<div class="p-4">
+  <img src="{{data.image}}" alt="poster" height="400" class="float-start me-3">
+  <div class="p-4">
+    <h2>{{data.fullTitle}}</h2>
+    <p *ngIf="data.directors">{{'directors' | translate}}: {{data.directors}}</p>
+    <p>Rating: {{data.imDbRating}}</p>
+    <p>Genres: {{data.genres}}</p>
+    <p>{{data.plot}}</p>
+    <p>Stars: {{data.stars}}</p>
+    <button type="button" class="btn btn-outline-dark mt-4">Similars</button>
+  </div>
+  <iframe width="961" height="721" src="{{trailerUrl.link}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
